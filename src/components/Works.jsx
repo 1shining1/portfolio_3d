@@ -14,7 +14,7 @@ const ProjectCard = ({
     description,
     tags,
     image,
-    source_code_link,
+    // source_code_link,
 }) => {
     return (
         <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -33,7 +33,7 @@ const ProjectCard = ({
                         className="w-full h-full object-cover rounded-2xl"
                     />
 
-                    <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                    {/* <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
                         <div
                             onClick={() =>
                                 window.open(source_code_link, "_blank")
@@ -46,7 +46,7 @@ const ProjectCard = ({
                                 className="w-1/2 h-1/2 object-contain"
                             />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="mt-5">
@@ -85,15 +85,16 @@ const Works = () => {
                     className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
                 >
                     Following projects showcases my skills and experience
-                    through real-world examples of my work. Each project is
+                    through real-world examples of my work.{" "}
+                    {/*Each project is
                     briefly described with links to code repositories and live
                     demos in it. It reflects my ability to solve complex
                     problems, work with different technologies, and manage
-                    projects effectively.
+                    projects effectively. */}
                 </motion.p>
             </div>
 
-            <div className="mt-20 flex flex-wrap gap-7">
+            <div className="mt-10 flex flex-wrap gap-7">
                 {projects.map((project, index) => (
                     <ProjectCard
                         key={`project-${index}`}
